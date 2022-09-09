@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Playfair+Display:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Layer Base */
+@layer base {
+  body {
+    @apply font-mon text-textLight text-[16px] leading-[24px] font-medium dark:text-textDark;
+  }
+  h1 {
+    @apply text-[48px] leading-[58px] font-bold mobile:text-[40px] mobile:leading-[50px];
+  }
+  h2 {
+    @apply text-[32px] leading-[40px] font-bold mobile:text-[24px] mobile:leading-[32px] mobile:font-semibold;
+  }
+  h3 {
+    @apply text-[24px] leading-[32px] font-semibold mobile:text-[20px] mobile:leading-[28px];
+  }
+  h4 {
+    @apply text-[24px] leading-[32px] font-bold mobile:text-[20px] mobile:leading-[28px];
+  }
+  h5 {
+    @apply text-[20px] leading-[28px] font-bold mobile:text-[16px] mobile:leading-[24px];
+  }
+  h6 {
+    @apply text-[16px] leading-[24px] font-bold mobile:text-[16px] mobile:leading-[24px];
+  }
+  span {
+    @apply text-sm leading-[20px] font-medium;
+  }
+  p {
+    @apply text-xs leading-[16px] font-medium;
+  }
+  .btn {
+    @apply text-[16px] leading-[24px] font-bold;
+  }
+  input {
+    @apply outline-none;
+  }
+  .border {
+    @apply border-[1px] border-solid;
+  }
+}
+
+.animate-bounce {
+  animation: bounce 0.5s infinite;
+}
+
+/* Effect Button */
+.activeButtonCha:hover .activeButtonCon {
+  animation: Width 0.3s linear;
+  width: 100%;
+}
+
+@keyframes Width {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}
