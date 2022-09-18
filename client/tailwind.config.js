@@ -7,6 +7,7 @@ module.exports = {
       screens: {
         mobile: { max: '480px' },
         tablet: { max: '1136px', min: '481px' },
+        molet: { max: '1136px' },
         // => @media (max-width: 1535px) { ... }
       },
       width: {
@@ -25,6 +26,7 @@ module.exports = {
         borderDark: '#fff',
         active: '#4f79d4',
         'btn-text': '#bb9f43',
+        btn: '#666',
       },
       fontFamily: {
         mon: ['Montserrat'],
@@ -46,12 +48,17 @@ module.exports = {
           '0%': { width: 0 },
           '100%': { width: '100%' },
         },
+        mount: {
+          '0%': { opacity: 0, transform: 'translateY(100%)' },
+          '100%': { opacity: '100%', transform: 'translateY(0)' },
+        },
       },
       // Automation
       animation: {
         // For Toast
         fromRight: 'fromRight 3s ease-in-out',
         growWidth: 'growWidth 3s ease-in-out',
+        mount: 'mount 0.3s ease-in-out',
       },
     },
   },

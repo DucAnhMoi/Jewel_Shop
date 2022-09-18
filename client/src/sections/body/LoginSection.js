@@ -2,11 +2,11 @@
 import React from 'react';
 import Image from 'next/image';
 // Import components/assets/sections/....
-import LoginForm from 'src/sections/forms/LoginForm';
 import { Brand } from 'src/components';
 import loginImg from 'public/assets/login.jpg';
+import { LoginForm } from 'src/sections/forms';
 
-const LoginSection = () => {
+export const LoginSection = () => {
   return (
     <>
       {/* Image */}
@@ -23,5 +23,3 @@ const LoginSection = () => {
     </>
   );
 };
-
-export default LoginSection;

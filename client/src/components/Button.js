@@ -62,17 +62,17 @@ export function Button({
   //Style Btn
   if (primary) {
     var classes =
-      'bg-[#666] text-[#fff] fill-[#fff] border-transparent hover:bg-[#fff] hover:text-[#000] hover:fill-[#000] hover:border-[#666] dark:bg-[#fff] dark:text-[#000] dark:fill-[#000] dark:border-transparent dark:hover:bg-[#666] dark:hover:text-[#fff] dark:hover:fill-[#fff] dark:hover:border-[#666]';
+      'bg-btn text-[#fff] fill-[#fff] border-transparent hover:bg-[#fff] hover:text-[#000] hover:fill-[#000] hover:border-btn dark:bg-[#fff] dark:text-[#000] dark:fill-[#000] dark:border-transparent dark:hover:bg-btn dark:hover:text-[#fff] dark:hover:fill-[#fff] dark:hover:border-btn';
   } else if (secondary) {
     var classes =
-      'bg-[#fff] text-[#000] fill-[#000] border-transparent hover:bg-[#666] hover:text-[#fff] hover:fill-[#fff] hover:border-[#fff] dark:bg-[#666] dark:text-[#fff] dark:fill-[#fff] dark:border-transparent dark:hover:bg-[#fff] dark:hover:text-[#000] dark:hover:fill-[#000] dark:hover:border-[#fff]';
+      'bg-[#fff] text-[#000] fill-[#000] border-transparent hover:bg-btn hover:text-[#fff] hover:fill-[#fff] hover:border-[#fff] dark:bg-btn dark:text-[#fff] dark:fill-[#fff] dark:border-transparent dark:hover:bg-[#fff] dark:hover:text-[#000] dark:hover:fill-[#000] dark:hover:border-[#fff]';
   } else if (text) {
     var classes = 'relative border-transparent';
   } else if (outline) {
     var classes =
-      'bg-[#fff] text-[#000] border-[#000] fill-[#000] hover:bg-[#666] hover:text-[#fff] hover:border-[#fff] hover:fill-[#fff] dark:bg-[#666] dark:text-[#fff] dark:border-[#666] dark:fill-[#fff] dark:hover:bg-[#fff] dark:hover:text-[#000] dark:hover:border-[#666] dark:hover:fill-[#000]';
+      'bg-[#fff] text-[#000] border-[#000] fill-[#000] hover:bg-btn hover:text-[#fff] hover:border-[#fff] hover:fill-[#fff] dark:bg-btn dark:text-[#fff] dark:border-btn dark:fill-[#fff] dark:hover:bg-[#fff] dark:hover:text-[#000] dark:hover:border-btn dark:hover:fill-[#000]';
   } else if (disabled) {
-    var classes = 'bg-[#aaa] text-[#666] line-through';
+    var classes = 'bg-[#aaa] text-btn line-through';
   }
 
   // Logic Hover

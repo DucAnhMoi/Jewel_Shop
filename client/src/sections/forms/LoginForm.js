@@ -3,14 +3,14 @@ import React, { useState } from 'react';
 // Import components/assets/sections/....
 import { Button, FormProvider } from 'src/components';
 import { TextField } from 'src/components/fields';
-import { FacebookColorIcon, GoogleColorIcon } from 'src/components/icons/Icons';
 import {
   validateLogin,
   validateLoginPassword,
   validateLoginUsername,
 } from 'src/utils/schemaValidate/schemaLogin';
+import { LoginOtherSection } from 'src/sections/forms';
 
-const LoginForm = () => {
+export const LoginForm = () => {
   // Data
   const [data, setData] = useState({
     username: '',
@@ -86,7 +86,7 @@ const LoginForm = () => {
           onFocus={handleFocus}
           onBlur={() => validateLoginPassword(data, setMessage)}
         />
-        <Button to="/forgotpassword" text line className="inline-block mt-[16px]">
+        <Button to="/auth/forgotpassword" text line className="inline-block mt-[16px]">
           Quên mật khẩu?
         </Button>
       </div>
@@ -96,35 +96,13 @@ const LoginForm = () => {
         ĐĂNG NHẬP
       </Button>
 
-      <h6 className="mt-[32px]">Hoặc đăng nhập bằng</h6>
-
-      {/* Login other */}
-      <div className="mt-[24px] flex justify-between">
-        <Button
-          outline
-          to="/login"
-          leftIcon={<FacebookColorIcon />}
-          className="flex items-center px-[32px] py-[8px] rounded-[9999px]"
-          styleLeftIcon="mr-[16px]"
-        >
-          Facebook
-        </Button>
-        <Button
-          outline
-          to="/login"
-          leftIcon={<GoogleColorIcon />}
-          className="flex items-center px-[32px] py-[8px] rounded-[9999px]"
-          styleLeftIcon="mr-[16px]"
-        >
-          Google
-        </Button>
-      </div>
+      <LoginOtherSection />
 
       {/* Switch to register */}
       <span className="mt-[16px] block">
         Bạn chưa có tài khoản?{' '}
         <Button
-          to="/register"
+          to="/auth/register"
           text
           line
           className="inline-block text-btn-text"
@@ -136,5 +114,3 @@ const LoginForm = () => {
     </FormProvider>
   );
 };
-
-export default LoginForm;

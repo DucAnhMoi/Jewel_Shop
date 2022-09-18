@@ -2,11 +2,12 @@
 import React from 'react';
 import Image from 'next/image';
 // Import components/assets/sections/....
-import RegisterForm from 'src/sections/forms/RegisterForm';
+import { RegisterForm } from 'src/sections/forms';
+
 import registerImg from 'public/assets/register.jpg';
 import { Brand } from 'src/components';
 
-const RegisterSection = () => {
+export const RegisterSection = () => {
   return (
     <>
       {/* Image */}
@@ -23,5 +24,3 @@ const RegisterSection = () => {
     </>
   );
 };
-
-export default RegisterSection;

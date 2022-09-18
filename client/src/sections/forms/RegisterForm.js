@@ -11,7 +11,7 @@ import {
   validateRegisterUsername,
 } from 'src/utils/schemaValidate/schemaRegister';
 
-const RegisterForm = () => {
+export const RegisterForm = () => {
   // Data
   const [data, setData] = useState({
     username: '',
@@ -195,7 +195,7 @@ const RegisterForm = () => {
       <span className="mt-[16px] block">
         Bạn đã có tài khoản?{' '}
         <Button
-          to="/login"
+          to="/auth/login"
           text
           line
           className="inline-block text-btn-text"
@@ -207,5 +207,3 @@ const RegisterForm = () => {
     </FormProvider>
   );
 };
-
-export default RegisterForm;

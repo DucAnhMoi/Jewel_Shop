@@ -15,6 +15,7 @@ export const TextField = ({
   styleLabel,
   styleIcon,
   styleMessage,
+  styleIconAbsolute,
   // Active
   active,
   ...props
@@ -25,7 +26,9 @@ export const TextField = ({
         <div className={`${styleIcon}`}>{icon}</div>
         <TextFieldArea label={label} name={name} variant="outlined" {...props} />
         {active && (
-          <div className="absolute left-[-6%] top-[40%] animate-bounce">{iconAbsolute}</div>
+          <div className={styleIconAbsolute || 'absolute left-[-6%] top-[40%] animate-bounce'}>
+            {iconAbsolute}
+          </div>
         )}
       </div>
       <span className={`${styleMessage} text-red-600`}>{message}</span>
