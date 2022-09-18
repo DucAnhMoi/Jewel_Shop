@@ -13,8 +13,8 @@ export const validateRegister = (data, setMessage) => {
 // Username
 export const validateRegisterUsername = (data, setMessage) => {
   const username = [
-    rulesValidate.max(data.username, 16, 'Tên người dùng chỉ được tối đa 16 kí tự'),
-    rulesValidate.min(data.username, 6, 'Tên người dùng phải có tối thiểu 6 kí tự'),
+    rulesValidate.max(data.username, 6, 'Tên người dùng chỉ được tối đa 6 kí tự'),
+    rulesValidate.min(data.username, 4, 'Tên người dùng phải có tối thiểu 4 kí tự'),
     rulesValidate.isRequired(data.username, 'Vui lòng nhập tên người dùng'),
   ];
   // Set err
