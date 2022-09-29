@@ -36,13 +36,42 @@ export const Header = () => {
             Trang chủ
           </Button>
           {/* Product */}
-          <Button text line className="mr-[8px]">
-            Sản Phẩm
-          </Button>
+          <Dropdown
+            className="dark:bg-bgLightMain bg-btn rounded-lg"
+            content={
+              <MenuItem
+                className="flex flex-col items-start w-[240px]"
+                menu={[
+                  { id: 1, title: 'Tất cả sản phẩm', to: '/product/all' },
+                  { id: 2, title: 'Nhẫn', to: '/about/recruit' },
+                  { id: 3, title: 'Dây chuyền', to: '/about/recruit' },
+                  { id: 4, title: 'Bông tai', to: '/about/recruit' },
+                  { id: 5, title: 'Lắc', to: '/about/recruit' },
+                ]}
+              />
+            }
+          >
+            <Button text line className="mr-[8px]">
+              Sản Phẩm
+            </Button>
+          </Dropdown>
           {/* About */}
-          <Button text line>
-            Về chúng tôi
-          </Button>
+          <Dropdown
+            className="dark:bg-bgLightMain bg-btn rounded-lg"
+            content={
+              <MenuItem
+                className="flex flex-col items-start w-[240px]"
+                menu={[
+                  { id: 1, title: 'Thương hiệu và lịch sử', to: '/about/info' },
+                  { id: 2, title: 'Tuyển dụng', to: '/about/recruit' },
+                ]}
+              />
+            }
+          >
+            <Button text line>
+              Về chúng tôi
+            </Button>
+          </Dropdown>
         </div>
 
         {/* Brand */}

@@ -1,0 +1,5 @@
+POST https://localhost:3000/v1/auth/register
+
+{
+    
+}

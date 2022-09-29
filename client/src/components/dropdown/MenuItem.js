@@ -3,14 +3,14 @@ import { useState } from 'react';
 // Import components/assets/sections/....
 import { Button } from 'src/components';
 
-export const MenuItem = ({ className }) => {
+export const MenuItem = ({ className, menu }) => {
   // id: 1,
   // title: 'Trang chủ',
   // to: '',
   // href: '',
   // icon: '',
   // children: [{}, {}],
-  const menu = [
+  const menuphu = [
     {
       id: 1,
       title: 'Trang chủ',
@@ -46,7 +46,6 @@ export const MenuItem = ({ className }) => {
   ];
   const [menuList, setMenuList] = useState([[...menu]]);
   const menuRender = menuList[menuList.length - 1];
-  console.log(menuRender);
   return (
     <div className={className}>
       {menuList.length > 1 ? (
@@ -62,7 +61,7 @@ export const MenuItem = ({ className }) => {
       ) : (
         <></>
       )}
-      {menuRender.map((item) => (
+      {menuRender?.map((item) => (
         <Button
           primary
           key={item.id}
@@ -73,6 +72,9 @@ export const MenuItem = ({ className }) => {
             if (item.children) {
               setMenuList([[...menuRender], [...item.children]]);
             }
+          }}
+          onBack={() => {
+            setMenuList([]);
           }}
         >
           {item.title}

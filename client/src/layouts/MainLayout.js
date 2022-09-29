@@ -46,7 +46,7 @@ const MainLayout = ({
         {isMode && (
           <Button
             primary
-            className="fixed flex items-center px-[16px] py-[8px] right-[2%] bottom-[2%] fill-white hover:fill-back"
+            className="fixed flex items-center px-[16px] py-[8px] left-[2%] bottom-[2%] fill-white hover:fill-back"
             leftIcon={<DarkIcon width={24} height={24} />}
             styleLeftIcon="mr-[8px]"
             onClick={handleSwitch}
@@ -58,7 +58,7 @@ const MainLayout = ({
         {isBack && (
           <Button
             primary
-            className="fixed flex items-center px-[16px] py-[8px] left-[2%] bottom-[2%]"
+            className="fixed flex items-center px-[16px] py-[8px] left-[2%] bottom-[10%]"
             leftIcon={<LeftArrowIcon width={24} height={24} />}
             styleLeftIcon="mr-[8px]"
             to="/"

@@ -2,7 +2,7 @@
 import React from 'react';
 // Import components/assets/sections/....
 import MainLayout from 'src/layouts/MainLayout';
-import { HomeSection } from 'src/sections/body';
+import { HomeSection } from 'src/sections/home';
 
 export default function home() {
   // UI

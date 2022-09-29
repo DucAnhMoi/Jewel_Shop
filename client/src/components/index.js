@@ -4,3 +4,6 @@ export * from './Pagination.js';
 export * from './Avatar.js';
 export * from './FormProvider.js';
 export * from './Progress.js';
+export * from './Products.js';
+export * from './Sort.js';
+export * from './ProductCard.js';

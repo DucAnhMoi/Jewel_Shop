@@ -7,7 +7,7 @@ import { Button } from 'src/components';
 
 export const AboutSection = () => {
   return (
-    <div className="w-desktop tablet:w-tablet mobile:w-mobile flex molet:flex-col-reverse py-[120px] tablet:py-[60px] mobile:pt-[0px] mobile:pb-[30px] bg-bgLightMain dark:bg-bgDarkMain rounded-t-lg">
+    <div className="wrapper flex molet:flex-col-reverse py-[120px] tablet:py-[60px] mobile:pt-[0px] mobile:pb-[30px] rounded-t-lg">
       <div className="mx-[40px] tablet:mx-[32px] mobile:mx-[16px]">
         <h2 className="molet:mt-[16px]">Về chúng tôi</h2>
         <h1 className="font-plf mt-[55px] mb-[32px]">"Ngày mai phải tốt hơn ngày hôm nay"</h1>

@@ -2,8 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 // Import components/assets/sections/....
-import { Button } from 'src/components';
-import ProductImg from 'public/assets/home3.jpg';
+import { Button, ProductCard } from 'src/components';
 
 export const ProductSection = () => {
   const products = [
@@ -11,7 +10,6 @@ export const ProductSection = () => {
     { id: 2, name: 'Lira Earrings', price: 355000 },
     { id: 3, name: 'Lira Earrings', price: 355000 },
     { id: 4, name: 'Lira Earrings', price: 355000 },
-    { id: 5, name: 'Lira Earrings', price: 355000 },
   ];
   return (
     <div className="w-desktop tablet:w-tablet mobile:w-mobile tablet:py-[60px] mobile:pt-[0px] mobile:pb-[30px] bg-bgLightMain dark:bg-bgDarkMain px-[40px] tablet:px-[32px] mobile:px-[16px]">
@@ -21,19 +19,9 @@ export const ProductSection = () => {
           Xem tất cả
         </Button>
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-around mx-[-16px] py-2">
         {products.map((product) => (
-          <div
-            key={product.id}
-            className="w-[20%] tablet:w-1/2 mobile:w-full flex flex-col items-center py-[24px]"
-          >
-            <Image src={ProductImg} width={160} height={188} />
-            <h5 className="mt-2">{product.name}</h5>
-            <h6 className="text-btn-text">{product.price}</h6>
-            <Button primary className="px-[22px] py-2">
-              Thêm vào giỏ
-            </Button>
-          </div>
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </div>

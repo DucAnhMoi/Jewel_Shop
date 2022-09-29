@@ -28,6 +28,7 @@ export function Button({
   //
   children,
   onClick,
+  onBack,
   ...passProps
 }) {
   const router = useRouter();
@@ -49,10 +50,20 @@ export function Button({
   //Logic Btn
   let Component = 'button';
   if (to) {
-    props = {
-      onClick: () => router.push(to),
-      ...passProps,
-    };
+    if (onBack) {
+      props = {
+        onClick: () => {
+          router.push(to);
+          onBack();
+        },
+        ...passProps,
+      };
+    } else {
+      props = {
+        onClick: () => router.push(to),
+        ...passProps,
+      };
+    }
     Component = 'div';
   } else if (href) {
     props.href = href;

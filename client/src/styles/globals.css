@@ -49,6 +49,9 @@
   .border {
     @apply border-[1px] border-solid;
   }
+  .wrapper {
+    @apply w-desktop tablet:w-tablet mobile:w-mobile bg-bgLightMain dark:bg-bgDarkMain;
+  }
 }
 
 .animate-bounce {
